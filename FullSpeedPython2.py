@@ -2,6 +2,26 @@ l=[1,2,4,5,8,9]
 for i in l:
     print(i)
 
+sum_ =0
+for value in l:
+    sum_ = sum_ + value
+print(sum_)
+
+for value in [0,1,2,3,4,5]:
+    print(value*value)
+
+myList = [1,3,5]
+for i in range(len(myList)):
+    print("index: ", i, "value: ", myList[i])
+#Sometimes you may need both things (indexes and values), and you can use the "enumerate" function:
+for i, value in enumerate(myList):
+    print("index: ",i, "value: ", value)
+
+n=10
+while n>0:
+    print(n)
+    n = n-1
+
 def getSublist(l):
     l1 = l[0:3]
     l2 = l[3:]
@@ -71,3 +91,40 @@ def getSquare2(list):
     return new_list
 
 print(getSquare2(range(21)))
+
+def findMax(list):
+    max_ = list[0]
+    for value in list:
+        if value > max_:
+            max_ = value
+    return max_
+
+print(findMax([-1, -2, 3, 4, 8, 0]))
+
+def findMaxValueIndex(list):
+    max_ = list[0]
+    max_i =0
+    for index, value in enumerate(list):
+        if value> max_:
+            max_ = value
+            max_i = index
+    return [max_i, max_ ]
+
+print(findMaxValueIndex([11,14,18,19]))
+
+def reverse(list):
+    length = len(list)
+    new_list = [None]*length
+
+    for value in list:
+        length = length - 1
+        new_list[length] = value
+    return new_list
+
+def reverse2(list):
+    new_list = []
+    for i in range(len(list)-1, -1, -1):
+        new_list.append(list[i])
+    return new_list
+
+print(reverse2([10, 20, 30, 40, 50, 60]))
