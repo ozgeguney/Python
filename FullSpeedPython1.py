@@ -6,7 +6,6 @@ def math_operation():
 
     return [division, floor_div, modules, exponentiation]
 
-
 [div, f_div, mod, exp] = math_operation()
 print(div, "-", f_div, "-", mod, "-", exp)
 
@@ -14,13 +13,11 @@ print(div, "-", f_div, "-", mod, "-", exp)
 def checkParity(n):
     return n % 2
 
-
 print(checkParity(16))
 
 
 def inRange(x, y):
     return (x < 1 / 3 < y)
-
 
 print(inRange(2, 3))
 
@@ -30,7 +27,6 @@ def getStr(s):
     for i in range(len(s)):
         new_s += s[i] * 3
     return new_s, len(new_s)
-
 
 print(getStr("abc"))
 
@@ -49,10 +45,13 @@ str = "aabbccx"
 find_str = "bbc"
 print(findOccurence(str, find_str))
 
+
 def findOccurance2(s,f):
     index = s.find(f)
     return [index, len(s)]
+
 print(findOccurance2(str,find_str))
+
 
 def changeCase(s):
     if not s.isupper():
@@ -60,4 +59,5 @@ def changeCase(s):
     else:
         s = s.lower()
     return s
+
 print(changeCase('aaa'))
